@@ -24,6 +24,8 @@ main{
 footer{
     grid-area: but;
 }
-nav{
-    
+.logo{
+    display: flex;
+    flex-direction: row;
+
 }
