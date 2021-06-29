@@ -15,10 +15,15 @@ body{
 }
 header{
     grid-area: top;
+    display: flex;
+    flex-direction: column;
 }
 main{
     grid-area: mid;
 }
 footer{
     grid-area: but;
+}
+nav{
+    
 }
