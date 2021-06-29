@@ -24,8 +24,15 @@ main{
 footer{
     grid-area: but;
 }
+.nav-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .logo{
     display: flex;
     flex-direction: row;
-
+    width: 80vw;
+    color: darkblue;
+    text-transform: uppercase;
 }
