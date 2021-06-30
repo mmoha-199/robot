@@ -21,6 +21,8 @@ header{
 }
 main{
     grid-area: mid;
+    display: grid;
+    justify-content: center;
 }
 footer{
     grid-area: but;
@@ -42,7 +44,15 @@ footer{
     padding-top: 20px;
 }
 .nav-list{
-    display: flex;
+    display: none;
     flex-direction: column;
     line-height: 30px;
+}
+.nav-list a{
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+.nav-list.visible{
+    display: flex;
 }
