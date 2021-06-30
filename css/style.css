@@ -23,6 +23,7 @@ main{
     grid-area: mid;
     display: grid;
     justify-content: center;
+    justify-items: center;
 }
 footer{
     grid-area: but;
@@ -39,7 +40,7 @@ footer{
     color: darkblue;
     text-transform: uppercase;
 }
-.nav-top i{
+#show-nav{
     font-size: 1.8em;
     padding-top: 20px;
 }
@@ -56,3 +57,48 @@ footer{
 .nav-list.visible{
     display: flex;
 }
+.disc-innr{
+    background-color: rgba(243, 239, 239, 0.74);
+    text-align: center;
+    text-transform: capitalize;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 98vw;
+    height: auto;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.13);
+}
+.circl-innr{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+}
+.circl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;  
+    padding-bottom: 30px;  
+}
+.circl a{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+.for-fa{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.116);
+    box-shadow: 0px 0px 6px 0px rgba(121, 119, 119, 0.521);    
+}
+
+.for-fa .fas, .for-fa .fab, .for-fa .far{
+    padding-top: 20%;
+}
+
