@@ -106,4 +106,13 @@ footer{
 .for-fa .fas, .for-fa .fab, .for-fa .far{
     padding-top: 20%;
 }
+.cat-innr{
+    text-align: center;
+    text-transform: capitalize;
+    background-color: rgba(132, 235, 235, 0.178);
+}
+.cat-innr video{
+    width: 96vw;
+    height: 250px;
+}
 
