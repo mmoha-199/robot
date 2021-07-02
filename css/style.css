@@ -99,6 +99,7 @@ footer{
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    align-self: center;
     border: 1px solid rgba(0, 0, 0, 0.116);
     box-shadow: 0px 0px 6px 0px rgba(121, 119, 119, 0.521);    
 }
@@ -118,8 +119,113 @@ footer{
 .shp-innr{
     text-align: center;
     text-transform: capitalize;
+    background-color: rgba(204, 248, 10, 0.062);
 }
-.sign-need i{
-    border: 1px solid black;
+.sign-need{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+.sign-need img{
+    width: 95%;
+    margin: 5px;
+}
+.sign-need a{
+    text-decoration: none;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.sign-butt button{
+    padding: 10px;
+    margin: 5px;
+}
+.crid-crds{
+    margin-top: 15px;
+}
+/******to-edit*/
+footer{
+    align-self: end;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 20px;
+    background-color: rgb(44, 43, 43);
+    color: white;
+}
+footer a{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    transition: color 0.2s;
+}
+footer a:hover{
+    color: rgb(255, 145, 0);
+}
+#direct i{
+    margin: 10px;
+}
+.refer-link{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.refer-link ul{
+    list-style: none;
+    margin-bottom: 10px;
+    line-height: 30px;
+    padding-left: 0px;
+    -webkit-padding-start: 0;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+.med-link{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+.med-link i{
+    padding: 5px;
+    cursor: pointer;
+
+}
+.fa-facebook:hover{
+    color: rgb(63, 63, 190);
+}
+.fa-instagram:hover{ 
+    color: #bc1888;   
+}
+.fa-twitter:hover{
+    color: rgb(104, 104, 230);
+}
+.fa-youtube:hover{
+    color: rgb(223, 18, 46);
+}
+.fa-google-plus-g:hover{
+    color: rgb(190, 72, 63);
+}
+.fa-snapchat-ghost:hover{
+    color: rgb(190, 188, 63);
+}
+.rights{
+    text-align: center;
+}
+.rights p{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.rights p::first-letter, .rights p a{
+    text-transform: capitalize;
 }
 
