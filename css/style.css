@@ -85,6 +85,7 @@ nav{
     background-color: rgba(243, 239, 239, 0.74);
     text-align: center;
     text-transform: capitalize;
+    transform: scale(1);
 }
 .disc-innr.down{
     margin-top:15rem;
