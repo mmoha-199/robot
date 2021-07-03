@@ -32,7 +32,7 @@ const tooGleNav =()=>{
     navMenu.classList.toggle('visible');
     DisCInn.classList.toggle('down');
 };
-const tooGleDisc=()=>{ CardInn.classList.toggle('visible')}
+const tooGleDisc=()=>{ CardInn.classList.toggle('visible')};
 
 NAVBUTON.addEventListener('click',tooGleNav);
 discCollps.addEventListener('onmouseover',tooGleDisc);
