@@ -98,7 +98,7 @@ nav{
     display: none;
 }
 .cards-innr.visible{
-    display: flex;
+    display: block;
 }
 .card{
     display: flex;

@@ -1,7 +1,7 @@
 const NAVBUTON = document.getElementById('show-nav');
-const CardInnr = document.getElementById('cards-innr');
+const CardInnr = document.getElementById('cards-box');
 const DisCInn = document.getElementById('discover'); 
-const discCollps = DisCInn.firstChild;
+const discCollps = DisCInn.firstElementChild;
 const MYNAV = document.querySelector('nav'); 
 let navMenu = document.createElement("ul");
 
@@ -32,8 +32,8 @@ const tooGleNav =()=>{
     navMenu.classList.toggle('visible');
     DisCInn.classList.toggle('down');
 };
-const tooGleDisc=()=>{ CardInn.classList.toggle('visible')};
+const tooGleDisc=()=>{ CardInnr.classList.toggle('visible')};
 
 NAVBUTON.addEventListener('click',tooGleNav);
-discCollps.addEventListener('onmouseover',tooGleDisc);
+discCollps.addEventListener('click',tooGleDisc);
 
