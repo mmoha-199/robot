@@ -28,6 +28,9 @@ main{
 footer{
     grid-area: but;
 }
+nav{
+    position: fixed;
+}
 .nav-top{
     display: flex;
     flex-direction: row;
