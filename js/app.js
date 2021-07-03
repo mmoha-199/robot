@@ -1,15 +1,12 @@
 const NAVBUTON = document.getElementById('show-nav');
-const CardInnr = document.getElementById('cards-box');
-const CirclInnr = document.getElementById('circl-box');
-
 const DisCInn = document.getElementById('discover'); 
 const LatEInn = document.getElementById('latest'); 
-
-const discCollps = DisCInn.firstElementChild;
-const lateCollps = LatEInn.firstElementChild;
-
 const MYNAV = document.querySelector('nav'); 
 const navMenu = document.createElement("ul");
+//const discCollps = DisCInn.firstElementChild;
+//const lateCollps = LatEInn.firstElementChild;
+//const CardInnr = document.getElementById('cards-box');
+//const CirclInnr = document.getElementById('circl-box');
 
 document.body.onload = addElement;
 
@@ -32,24 +29,22 @@ function addElement () {
   MYNAV.appendChild(navMenu);
 }
 
-
 //toogle the nav menu and the first main section
 const tooGleNav =()=>{
     navMenu.classList.toggle('visible');
     DisCInn.classList.toggle('down');
 };
-const tooGleDisc=()=>{ CardInnr.classList.toggle('visible')};
-const tooGleLate=()=>{ CirclInnr.classList.toggle('visible')};
-
 
 NAVBUTON.addEventListener('click',tooGleNav);
-discCollps.addEventListener('click',tooGleDisc);
-lateCollps.addEventListener('click',tooGleLate);
-function getFirstChl(a){
+
+function tooGlSections(a){
   const x = a.firstElementChild;
-  return x;
+  const b = a.firstElementChild.nextElementSibling;
+  const ttgg=()=>{b.classList.toggle('visible')};
+  x.addEventListener('click',ttgg);
 }
 
-function toOglA(a){
-   a.classList.toggle('visible');
-}
+tooGlSections(DisCInn);
+tooGlSections(LatEInn);
+
+
