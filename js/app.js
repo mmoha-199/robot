@@ -1,9 +1,15 @@
 const NAVBUTON = document.getElementById('show-nav');
 const CardInnr = document.getElementById('cards-box');
+const CirclInnr = document.getElementById('circl-box');
+
 const DisCInn = document.getElementById('discover'); 
+const LatEInn = document.getElementById('latest'); 
+
 const discCollps = DisCInn.firstElementChild;
+const lateCollps = LatEInn.firstElementChild;
+
 const MYNAV = document.querySelector('nav'); 
-let navMenu = document.createElement("ul");
+const navMenu = document.createElement("ul");
 
 document.body.onload = addElement;
 
@@ -33,7 +39,17 @@ const tooGleNav =()=>{
     DisCInn.classList.toggle('down');
 };
 const tooGleDisc=()=>{ CardInnr.classList.toggle('visible')};
+const tooGleLate=()=>{ CirclInnr.classList.toggle('visible')};
+
 
 NAVBUTON.addEventListener('click',tooGleNav);
 discCollps.addEventListener('click',tooGleDisc);
+lateCollps.addEventListener('click',tooGleLate);
+function getFirstChl(a){
+  const x = a.firstElementChild;
+  return x;
+}
 
+function toOglA(a){
+   a.classList.toggle('visible');
+}
