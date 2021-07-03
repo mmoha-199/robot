@@ -1,16 +1,39 @@
 const NAVBUTON = document.getElementById('show-nav');
-const navLIst = document.getElementById('show-ln');
+const CardInnr = document.getElementById('cards-innr');
 const DisCInn = document.getElementById('discover'); 
+const discCollps = DisCInn.firstChild;
+const MYNAV = document.querySelector('nav'); 
+let navMenu = document.createElement("ul");
 
-document.
+document.body.onload = addElement;
+
+function addElement () {
+  // create a new ul element
+     navMenu.className= 'nav-list';
+     navMenu.id = 'show-In';
+   // and give it content
+   const menuLinks =
+   `<a href="">home</a>
+   <a href="">discover</a>
+   <a href="">latest</a>
+   <a href="">categories</a>
+   <a href="">account</a>
+   <a href="">shop</a>`;
+
+  // add li node to the newly created ul
+  navMenu.insertAdjacentHTML('afterbegin',menuLinks);
+  // add the ul to the nav
+  MYNAV.appendChild(navMenu);
+}
 
 
-
+//toogle the nav menu and the first main section
 const tooGleNav =()=>{
-    navLIst.classList.toggle('visible');
+    navMenu.classList.toggle('visible');
     DisCInn.classList.toggle('down');
 };
-
+const tooGleDisc=()=>{ CardInn.classList.toggle('visible')}
 
 NAVBUTON.addEventListener('click',tooGleNav);
+discCollps.addEventListener('onmouseover',tooGleDisc);
 
