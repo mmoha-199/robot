@@ -58,9 +58,19 @@ footer{
     display: flex;
 }
 .disc-innr{
+    width: 100vw;
     background-color: rgba(243, 239, 239, 0.74);
     text-align: center;
     text-transform: capitalize;
+}
+.cat-innr{
+    width: 100vw;
+}
+.cards-innr{
+    display: none;
+}
+.cards-innr.visible{
+    display: flex;
 }
 .card{
     display: flex;
@@ -79,9 +89,12 @@ footer{
    background-color: rgba(236, 13, 58, 0.089);
 }
 .circl-innr{
-    display: grid;
+    display: none;
     grid-template-columns: 50% 50%;
     grid-template-rows: 33.33% 33.33% 33.33%;
+}
+.circl-innr.visible{
+    display: grid;
 }
 .circl{
     display: flex;

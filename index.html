@@ -58,7 +58,10 @@
 
         </div>
         <div class="lat-innr" id="latest">
-            <h1>latest</h1>
+            <span>
+                <h1>latest</h1>
+                <p>newer technologies</p>
+            </span>
             <div class="circl-innr">
                 <div class="circl">
                     <div class="for-fa">
@@ -99,47 +102,50 @@
             </div>
         </div>
         <div class="cat-innr" id="categories">
-            <h1>category</h1>
-            <p>choose your robot</p>
-            <div class="card">
-                <h2>Pre-Programmed Robots</h2>
-                <p>
-                    Pre-programmed robots operate in a controlled environment where they do simple, monotonous tasks.
-                </p>
-                <img src="./css/img/pre-rob.jpg" alt="">
+            <span>
+                <h1>category</h1>
+                <p>choose your robot</p>
+            </span>
+            <div class="cards-innr">
+                <div class="card">
+                    <h2>Pre-Programmed Robots</h2>
+                    <p>
+                        Pre-programmed robots operate in a controlled environment where they do simple, monotonous tasks.
+                    </p>
+                    <img src="./css/img/pre-rob.jpg" alt="">
+                </div>
+                <div class="card">
+                    <h2>Humanoid Robots</h2>
+                    <p>
+                        Humanoid robots are robots that look like and/or mimic human behavior.
+                    </p>
+                    <video controls muted>
+                        <source src="./css/img/huma-rob.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="card">
+                    <h2>Autonomous Robots</h2>
+                    <p>
+                        These robots are usually designed to carry out tasks in open environments that do not require human supervisio
+                    </p>
+                    <img src="./css/img/auto-rob.jpg" alt="">
+                </div>
+                <div class="card">
+                    <h2>Teleoperated Robots</h2>
+                    <p>
+                        These robots usually work in extreme geographical conditions, weather, circumstances, etc.
+                    </p>
+                    <img src="./css/img/tele-rob.jpg" alt="">
+                </div>
+                <div class="card">
+                    <h2>Augmenting Robots</h2>
+                    <p>
+                        Augmenting robots either enhance current human capabilities or replace the capabilities a human may have lost.
+                    </p>
+                    <img src="./css/img/aug-rob.jpg" alt="">
+                </div>
             </div>
-            <div class="card">
-                <h2>Humanoid Robots</h2>
-                <p>
-                    Humanoid robots are robots that look like and/or mimic human behavior.
-                </p>
-                <video controls muted>
-                    <source src="./css/img/huma-rob.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="card">
-                <h2>Autonomous Robots</h2>
-                <p>
-                    These robots are usually designed to carry out tasks in open environments that do not require human supervisio
-                </p>
-                <img src="./css/img/auto-rob.jpg" alt="">
-            </div>
-            <div class="card">
-                <h2>Teleoperated Robots</h2>
-                <p>
-                    These robots usually work in extreme geographical conditions, weather, circumstances, etc.
-                </p>
-                <img src="./css/img/tele-rob.jpg" alt="">
-            </div>
-            <div class="card">
-                <h2>Augmenting Robots</h2>
-                <p>
-                    Augmenting robots either enhance current human capabilities or replace the capabilities a human may have lost.
-                </p>
-                <img src="./css/img/aug-rob.jpg" alt="">
-            </div>
-
         </div>
         <div class="shp-innr" id="shop">
             <h1>shop</h1>
@@ -161,6 +167,42 @@
                     <i class="fab fa-cc-amazon-pay fa-2x"></i>
                 </div>
                 <p>we accept all credit card types</p>
+            </div>
+            <div class="mail-us">
+                <h3>send us a question</h3>
+                <form action="" method="get" class="myform">
+                    <div class="myform">
+                        <label for="name">Enter your name:</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="myform">
+                        <label for="email">Enter your email:</label>
+                        <input type="text" name="email" id="email" required>
+                    </div>
+                
+                    <div class="text-forrm">
+                        <label for="tell-more">Tell us more:</label>
+                        <textarea name="tell-more" id="" cols="30" rows="10">minimum 500 charecters...
+                        </textarea>
+                
+                    </div>
+                    <div class="myform">
+                        <label for="hobby">choose a hobby:</label>
+                        <select name="hobbies" id="hobby">
+                            <option value="">choose a section</option>
+                            <option value="walking">dilevery</option>
+                            <option value="runing">nearby shop</option>
+                            <option value="boxing">find us</option>
+                            <option value="fishing">buy a plan</option>
+                            <option value="dancing">donation</option>
+                            <option value="jumping">other</option>
+                
+                        </select>
+                    </div>
+                    <div class="myform">
+                        <input type="submit" value="Send your message">
+                    </div> 
+                </form>
             </div>
         </div>
     </main>
