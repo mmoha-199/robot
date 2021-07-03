@@ -30,6 +30,11 @@ footer{
 }
 nav{
     position: fixed;
+    top: 0%;
+    width: 100vw;
+    z-index: 1;
+    background-image: url(./img/nav-im.jpg);
+    background-size: cover;
 }
 .nav-top{
     display: flex;
@@ -40,12 +45,13 @@ nav{
     display: flex;
     flex-direction: row;
     width: 80vw;
-    color: darkblue;
+    color: rgba(62, 6, 114, 0.897);
     text-transform: uppercase;
 }
 #show-nav{
     font-size: 1.8em;
     padding-top: 20px;
+    color: rgb(253, 253, 253);
 }
 .nav-list{
     display: none;
@@ -54,14 +60,19 @@ nav{
 }
 .nav-list a{
     text-decoration: none;
+    font-family: inherit;
+    text-transform: uppercase;
     font-size: 1.1em;
-    font-weight: 400;
+    font-weight: 800;
+    color: rgb(226, 220, 231);
 }
 .nav-list.visible{
     display: flex;
 }
 .disc-innr{
     width: 100vw;
+    margin-top: 3rem;
+    padding-top: 2rem;
     background-color: rgba(243, 239, 239, 0.74);
     text-align: center;
     text-transform: capitalize;
