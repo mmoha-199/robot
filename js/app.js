@@ -21,11 +21,11 @@ function addElement () {
    // and give it content
    const menuLinks =
    `<a href="">home</a>
-   <a href="">discover</a>
-   <a href="">latest</a>
-   <a href="">categories</a>
-   <a href="">account</a>
-   <a href="">shop</a>`;
+   <a href="#discover">discover</a>
+   <a href="#latest">latest</a>
+   <a href="#categories">categories</a>
+   <a href="#contact">contact</a>
+   <a href="#shop">shop</a>`;
 
   // add li node to the newly created ul
   navMenu.insertAdjacentHTML('afterbegin',menuLinks);
@@ -55,9 +55,12 @@ tooGlSections(ShopInn);
 
 
 function scroOllto(sect){
-  sect.scrollIntoView();
+  sect.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"}); 
 }
-
+scroOllto(DisCInn);
+scroOllto(LatEInn);
+scroOllto(CatGInn);
+scroOllto(ShopInn);
 
 
 

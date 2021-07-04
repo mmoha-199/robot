@@ -51,6 +51,7 @@ nav{
     flex-direction: row;
     width: 80vw;
     text-transform: uppercase;
+    color: rgb(199, 199, 245);
 }
 .logo i{
     cursor: none;
@@ -158,9 +159,16 @@ nav{
     height: 250px;
 }
 .shp-innr{
+    width: 100vw;
     text-align: center;
     text-transform: capitalize;
     background-color: rgba(204, 248, 10, 0.062);
+}
+.shp-main{
+    display: none;
+}
+.shp-main.visible{
+    display: block;
 }
 .sign-need{
     display: flex;
