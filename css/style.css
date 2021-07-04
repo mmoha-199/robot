@@ -33,12 +33,13 @@ footer{
 }
 nav{
     position: fixed;
-    top: 0%;
+    top: 0;
     width: 100vw;
     z-index: 1;
     color: aliceblue;
     background-image: url(./img/nav-im.jpg);
     background-size: cover;
+    transition: top 0.3s;
 
 }
 .nav-top{

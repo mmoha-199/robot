@@ -2,7 +2,12 @@ const NAVBUTON = document.getElementById('show-nav');
 const DisCInn = document.getElementById('discover'); 
 const LatEInn = document.getElementById('latest'); 
 const CatGInn = document.getElementById('categories'); 
-const ShopInn = document.getElementById('shop'); 
+const ShopInn = document.getElementById('shop');
+const AdrsInn = document.getElementById('adress');
+const myNav = document.querySelector('nav');
+
+
+
 
 
 const MYNAV = document.querySelector('nav'); 
@@ -24,8 +29,8 @@ function addElement () {
    <a href="#discover">discover</a>
    <a href="#latest">latest</a>
    <a href="#categories">categories</a>
-   <a href="#contact">contact</a>
-   <a href="#shop">shop</a>`;
+   <a href="#shop">shop</a>
+   <a href="#adress">contact</a>`;
 
   // add li node to the newly created ul
   navMenu.insertAdjacentHTML('afterbegin',menuLinks);
@@ -55,12 +60,24 @@ tooGlSections(ShopInn);
 
 
 function scroOllto(sect){
-  sect.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"}); 
+  sect.scrollIntoView();
 }
 scroOllto(DisCInn);
 scroOllto(LatEInn);
 scroOllto(CatGInn);
 scroOllto(ShopInn);
+scroOllto(AdrsInn);
+
+let prevScrolpos = window.pageYOffset;
+window.onscroll = function() {
+  let currentScrolPos = window.pageYOffset;
+  if (prevScrolpos > currentScrolPos) {
+    myNav.style.top = "0";
+  } else {
+    myNav.style.top = "-280px";
+  }
+  prevScrolpos = currentScrolPos;
+}
 
 
 
