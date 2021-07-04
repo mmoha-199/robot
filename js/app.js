@@ -1,6 +1,10 @@
 const NAVBUTON = document.getElementById('show-nav');
 const DisCInn = document.getElementById('discover'); 
 const LatEInn = document.getElementById('latest'); 
+const CatGInn = document.getElementById('categories'); 
+const ShopInn = document.getElementById('shop'); 
+
+
 const MYNAV = document.querySelector('nav'); 
 const navMenu = document.createElement("ul");
 //const discCollps = DisCInn.firstElementChild;
@@ -46,5 +50,14 @@ function tooGlSections(a){
 
 tooGlSections(DisCInn);
 tooGlSections(LatEInn);
+tooGlSections(CatGInn);
+tooGlSections(ShopInn);
+
+
+function scroOllto(sect){
+  sect.scrollIntoView();
+}
+
+
 
 
