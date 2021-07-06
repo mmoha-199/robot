@@ -12,30 +12,49 @@ const myNav = document.querySelector('nav');
 
 const MYNAV = document.querySelector('nav'); 
 const navMenu = document.createElement("ul");
-//const discCollps = DisCInn.firstElementChild;
-//const lateCollps = LatEInn.firstElementChild;
-//const CardInnr = document.getElementById('cards-box');
-//const CirclInnr = document.getElementById('circl-box');
+const navli = document.createElement("li");
+const navAa = document.createElement("a");
+
+
+
 
 document.body.onload = addElement;
 
 function addElement () {
   // create a new ul element
-     navMenu.className= 'nav-list';
-     navMenu.id = 'show-In';
-   // and give it content
-   const menuLinks =
-   `<a href="">home</a>
-   <a href="#discover">discover</a>
-   <a href="#latest">latest</a>
-   <a href="#categories">categories</a>
-   <a href="#shop">shop</a>
-   <a href="#adress">contact</a>`;
+   
+   navMenu.className= 'nav-list';
+   navMenu.id = 'show-In';
+   /*const menuLinks =
+   `<li><a href="#">home</a></li>
+   <li><a href="#discover">discover</a></li>
+   <li><a href="#latest">latest</a></li>
+   <li><a href="#categories">categories</a></li>
+   <li><a href="#shop">shop</a></li>
+   <li><a href="#adress">contact</a></li>`;*/
 
-  // add li node to the newly created ul
+  //add li node to the newly created ul
   navMenu.insertAdjacentHTML('afterbegin',menuLinks);
   // add the ul to the nav
+  
   MYNAV.appendChild(navMenu);
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+  isInViewport(CatGInn);
+  document.addEventListener('scroll', function () {
+    for(const link of navMenu){
+      link.style.color='red';
+    }
+  }, {
+    passive: true
+  });
 }
 
 //toogle the nav menu and the first main section
@@ -67,17 +86,30 @@ scroOllto(LatEInn);
 scroOllto(CatGInn);
 scroOllto(ShopInn);
 scroOllto(AdrsInn);
+let prevScr = window.pageYOffset;
 
-let prevScrolpos = window.pageYOffset;
-window.onscroll = function() {
-  let currentScrolPos = window.pageYOffset;
-  if (prevScrolpos > currentScrolPos) {
-    myNav.style.top = "0";
-  } else {
-    myNav.style.top = "-280px";
-  }
-  prevScrolpos = currentScrolPos;
-}
+const naVDowns = function(){
+  let currScr = window.pageYOffset;
+ if(prevScr > currScr){
+   myNav.style.top='0';
+ }else{
+   myNav.style.top ='-70px';
+ }
+ prevScr = currScr;
+};
+function mmyConstw(){
+  window.addEventListener('scroll',naVDowns);
+};
+
+
+window.setTimeout(mmyConstw(),3000);
+
+
+
+
+
+
+
 
 
 
