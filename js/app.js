@@ -3,59 +3,57 @@ const DisCInn = document.getElementById('discover');
 const LatEInn = document.getElementById('latest'); 
 const CatGInn = document.getElementById('categories'); 
 const ShopInn = document.getElementById('shop');
-const AdrsInn = document.getElementById('adress');
+const AdrsInn = document.getElementById('contact');
 const myNav = document.querySelector('nav');
 
 
 
 
 
-const MYNAV = document.querySelector('nav'); 
+
+
+const sctin = document.getElementsByClassName('section');
 const navMenu = document.createElement("ul");
-const navli = document.createElement("li");
-const navAa = document.createElement("a");
+navMenu.setAttribute('class' ,'nav-list');
+const MYNAV = document.querySelector('nav'); 
+
+document.body.onload = addNavEl;
+
+function addNavEl () {
+  for( y = 0 ; y < sctin.length ;y++){
+    const linkName = sctin[y].id;
+    const linkNCapt = linkName.toUpperCase();
+    navMenu.innerHTML += `<li><a href='#${linkName}'>${linkNCapt}</a></li>`;
+  }
+  MYNAV.appendChild(navMenu); 
+}
+
+const aelements = navMenu.getElementsByTagName('a');
 
 
-
-
-document.body.onload = addElement;
-
-function addElement () {
-  // create a new ul element
+function sectInView(){
+  const getscaugth=(el)=>{
+    
+      rect = el.getBoundingClientRect() ;
+      return rect.top <= 100 && rect.bottom >= 50
+  };
    
-   navMenu.className= 'nav-list';
-   navMenu.id = 'show-In';
-   /*const menuLinks =
-   `<li><a href="#">home</a></li>
-   <li><a href="#discover">discover</a></li>
-   <li><a href="#latest">latest</a></li>
-   <li><a href="#categories">categories</a></li>
-   <li><a href="#shop">shop</a></li>
-   <li><a href="#adress">contact</a></li>`;*/
+  for(const link of aelements){
 
-  //add li node to the newly created ul
-  navMenu.insertAdjacentHTML('afterbegin',menuLinks);
-  // add the ul to the nav
-  
-  MYNAV.appendChild(navMenu);
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    window.addEventListener(
+      'scroll',
+      function(){
+        if(getscaugth(sect)){
+          link.classList.add('newColor');
+        }else{
+          link.classList.remove('newColor');
+        }
+      }
     );
   }
-  isInViewport(CatGInn);
-  document.addEventListener('scroll', function () {
-    for(const link of navMenu){
-      link.style.color='red';
-    }
-  }, {
-    passive: true
-  });
-}
+};
+sectInView();
+
 
 //toogle the nav menu and the first main section
 const tooGleNav =()=>{
@@ -103,13 +101,4 @@ function mmyConstw(){
 
 
 window.setTimeout(mmyConstw(),3000);
-
-
-
-
-
-
-
-
-
 

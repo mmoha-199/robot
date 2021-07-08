@@ -72,11 +72,14 @@ nav{
 .nav-list a{
     text-decoration: none;
     font-family: inherit;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     letter-spacing: 2px;
     font-size: 1.1em;
     font-weight: 800;
     color: rgb(226, 220, 231);
+}
+.nav-list a.newColor{
+    color: green;
 }
 .nav-list a:hover{
     color: rgb(197, 66, 14);
