@@ -19,11 +19,13 @@ body a, body i, body button{
 }
 header{
     grid-area: top;
+    width: 100vw;
     display: flex;
     flex-direction: column;
 }
 main{
     grid-area: mid;
+    width: 100vw;
     display: grid;
     justify-content: center;
     justify-items: center;
@@ -31,6 +33,7 @@ main{
 }
 footer{
     grid-area: but;
+    width: 100vw;
 }
 nav{
     position: fixed;
@@ -303,20 +306,26 @@ footer a:hover{
     }
 }
 @media  screen and (min-width: 600px) {
-    #imm-1{
+    .imm-1{
         display: none;
     }
     .replacer{
         display: flex;
-        flex-direction: column;
-        
-        
+        flex-direction: column;    
     }
     .replacer img{
         width: 80vw;
         align-self: center;
     }
-
+    .replacer p{
+        text-align: justify;
+        align-self: center;
+        width: 65vw;
+    }
+    .three{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
 }
 /*769px — 1024px: Small screens, laptops*/
 @media  screen and (min-width: 769px) {
@@ -335,19 +344,8 @@ footer a:hover{
         margin: 0px 10px 0px 10px;   
         font-size: 1.4em; 
     }
-    .cards-innr.visible{
-        flex-direction: row;
-        
-    }
-    .card{
-        width: 24vw;
-        
-        margin: 0;
-        padding: 0;
-    }
-    .card img{
-        height: 200px;
-    }
+   
+    
 
 
 
