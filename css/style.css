@@ -1,7 +1,7 @@
 body{
     box-sizing: border-box;
     z-index: -1;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     margin: 0;
 }
@@ -75,9 +75,9 @@ nav{
     font-family: inherit;
     /*text-transform: uppercase;*/
     letter-spacing: 2px;
-    font-size: 1.1em;
-    font-weight: 800;
-    color: rgb(226, 220, 231);
+    font-size: 1.2em;
+    font-weight: 700;
+    color: white;  
 }
 .nav-list a.newColor{
     color: green;
@@ -107,7 +107,11 @@ nav{
     display: none;
 }
 .cards-innr.visible{
-    display: block;
+    display: flex;
+    flex-direction: column;
+}
+.replacer{
+    display: none;
 }
 .card{
     display: flex;
@@ -287,135 +291,67 @@ footer a:hover{
 }
 /*481px — 768px: iPads, Tablets*/
 @media  screen and (min-width: 481px) {
-    .nav-top img{
-        margin-left: 30%;
+   
+    .nav-list li{
+        padding: 5px 20px 5px 20px;
+        margin: 5px;
+        
     }
+    .nav-list li a{
+        font-size: 1.2em;
+        
+    }
+}
+@media  screen and (min-width: 600px) {
+    #imm-1{
+        display: none;
+    }
+    .replacer{
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+    .replacer img{
+        width: 80vw;
+        align-self: center;
+    }
+
 }
 /*769px — 1024px: Small screens, laptops*/
 @media  screen and (min-width: 769px) {
-    .navbar{
-        width: 100vw;
-        position: fixed;
+    .logo{
+        font-size: 1.5em;
     }
-    .nav-top img{
-        margin-left: 10vw;
-        padding-top: 10px;   
+    #show-nav{
+        display: none;
     }
     .nav-list{
         flex-direction: row;
-        justify-content: center;
+        justify-content: left;
     }
-    .nav-list a{
+    .nav-list li a{
         padding: 0px 10px 0px 10px;
-        margin: 0px 10px 0px 10px;    
+        margin: 0px 10px 0px 10px;   
+        font-size: 1.4em; 
     }
-    .nav-list a{
-        width: 10%;
-    }
-    .mmain-top{
-        height: 400px;
-        margin-top: 40px;
-        background-image: url("../img/car-cover.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-top: 50px;
-        z-index: -1;
-    }
-    .linear{
-        display: block;
-    }
-    .mmain-top h1{
-        font-size: 2em;
-        color: aliceblue;
-    }
-    .mmain-top h2{
-        font-size: 1.2em;
-        color: antiquewhite;
-    }
-    .mmain-top button{
-        width: 20vw;
-        cursor: pointer;
-    }
-    .big-icons{
-        grid-template-columns: repeat(4,25%);
-        grid-template-rows: 100%;
-        height: 250px;
-    }
-    .cards-box{
-        grid-template-columns: repeat(3,33%);
-        grid-template-rows: 100%;
-        height: 300px;
-    }
-    .serv-galry{
-        grid-area: cont4;
-        display: flex;
-        width: 100vw;
+    .cards-innr.visible{
         flex-direction: row;
-        padding: 0px;
-        margin: 0px;
-        background-color: rgb(247, 247, 236);
-        margin-bottom: 10px;
+        
     }
-    .capt-box:last-of-type{
-        margin-bottom: 0%;
+    .card{
+        width: 24vw;
+        
+        margin: 0;
+        padding: 0;
     }
-    .capt-box{
-        display: flex;
-        flex-direction: column;
-        width: 33%;
-        padding: 0px;
-        margin: 0px;
-        padding-bottom: 30px;
-        border: 1px solid rgba(0, 0, 0, 0.082);
+    .card img{
+        height: 200px;
     }
-    .anime{
-        display: none;
-    }
-    .capt-box:last-of-type{
-        display: none;
-    }
-    .capt-box h2{
-        font-size: 1em;
-        text-align: center;
-        padding: 0px;
-        font-family: 'Roboto',sans-serif;
-        letter-spacing: 1px; 
-    }
-    .capt-box img{
-       height: 220px;
-       width: 100%;
-    }
-    .about-us{
-        height: auto;
-        background-color: #e4e1e1;
-        margin-right: 0;
-    }
-    .butt-ab{
-        text-align: justify;
-        padding: 0px 30px 0 30px ;
-    }
-    .top-ab{
-        margin-top: 20px;
-        padding-top: 20px;
-    }
-    .about-us p{
-        color: black;
-        padding: 10px;
-        line-height: 50px;
-        font-size: 1.5em;
-    }
-    .logsign{
-        padding: 25px;
-        flex-direction: row;
-    }
-    .logsign p{
-        padding-top: 28px;
-    }
-    .logsign button{
-        width: 20vh;
-        margin: 20px;
-    }
+
+
+
+    
     .contact{
         padding-bottom: 10px;
     }
@@ -440,41 +376,11 @@ footer a:hover{
 }
 /*1025px — 1200px: Desktops, large screens*/
 @media only screen and (min-width: 1025px){
-    .nav-list li a{
-        padding: 40px;
-    }
-    .refer-link ul{
-        padding-left: 20%;
-    } 
-    .capt-box:last-of-type{
-        display: flex;
-        padding-bottom: 30px;   
-    }
+    
 }
 @media only screen and (min-width: 1200px){
-    .about-us{
-        width: 100vw;
-    }
-    .about-us p{
-        font-size: 28px;
-    }
-    .mmain-top button{
-        font-size: 1.2em;
-        width: 20vw;
-    }
-    .reserve .circle, .click .circle{
-        align-self: center;
-    }
-    .pref-col{
-        font-size: 1.2em;
-        letter-spacing: 2px;
-    }
-    .cards-box h1{
-        font-size: 1.4em;
-    }
-    .cards-box p{
-        font-size: 1.1em;
-    }
+    
+    
 }
 
 
