@@ -27,6 +27,7 @@ main{
     display: grid;
     justify-content: center;
     justify-items: center;
+    margin-top: auto;
 }
 footer{
     grid-area: but;
@@ -89,7 +90,7 @@ nav{
 }
 .disc-innr{
     width: 100vw;
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding-top: 2rem;
     background-color: rgba(243, 239, 239, 0.74);
     text-align: center;
@@ -97,7 +98,7 @@ nav{
     transform: scale(1);
 }
 .disc-innr.down{
-    margin-top:15rem;
+    margin-top:13rem;
 }
 .cat-innr{
     width: 100vw;
