@@ -234,11 +234,12 @@ nav{
     border: none;
     outline: none;
     color: white;
-    background-color: orangered;
+    background-color: rgb(224, 83, 32);
     padding: 10px;
     font-size: 1.1em;
+    transition: background-color 0.3s;
 }
-#bot-btn{
+#bot-btn:hover{
     background-color: grey;
 }
 /******to-edit*/

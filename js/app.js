@@ -6,6 +6,7 @@ const ShopInn = document.getElementById('shop');
 const AdrsInn = document.getElementById('contact');
 const myNav = document.querySelector('nav');
 const navMenu = document.createElement("ul");
+const topButtn = document.getElementById("bot-btn");
 
 navMenu.setAttribute('class' ,'nav-list');
 
@@ -91,6 +92,25 @@ window.setTimeout(function(){
       prevScr = currScr;
     });
 },3000);
+
+
+
+// show the button if user scroll down to 20px
+window.onscroll = ()=>{goUp()};
+
+function goUp() {
+  if (document.documentElement.scrollTop > 20) {
+    topButtn.style.display = "block";
+  } else {
+    topButtn.style.display = "none";
+  }
+}
+
+// When the button cliked scroll to the top 
+function toptoZro() {
+  document.documentElement.scrollTop = 0; 
+}
+topButtn.addEventListener('click',toptoZro)
 
 
 
