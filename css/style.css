@@ -514,6 +514,10 @@ footer a:hover{
         margin-right: 20px;
 
     }
+    .lat-innr span h1,.lat-innr span p{
+        text-align: left;
+        padding-left: 340px
+  }
     .shp-innr img{
         height: 350px;
     }
