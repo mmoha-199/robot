@@ -1,12 +1,15 @@
 body{
     box-sizing: border-box;
-    z-index: -1;
+    z-index: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     margin: 0;
 }
 body a, body i, body button{
     cursor: pointer;
+}
+body i:hover{
+    color: rgb(216, 102, 61);
 }
 .container{
     display: grid;
@@ -72,6 +75,7 @@ nav{
 }
 .nav-list li{
     list-style: none;
+    background-color: rgba(0, 0, 0, 0.253);
 }
 .nav-list a{
     text-decoration: none;
@@ -149,13 +153,18 @@ nav{
 }
 .circl a{
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: center;
+    letter-spacing: 2px;
     padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.26);
     box-shadow: 0px 0px 6px 0px rgba(121, 119, 119, 0.521); 
     border-radius: 5px;
     margin-bottom: 2px;
+}
+.circl a:hover{
+    background-color: green;
+    color: white;
 }
 .cirl-lk{
     display: flex;
@@ -212,18 +221,35 @@ nav{
     padding-bottom: 5px;
     margin-bottom: 5px;
 }
+.sign-butt{
+    margin: 15px;
+}
 .sign-butt button{
     padding: 10px;
     margin: 5px;
 }
 .crid-crds{
     margin-top: 15px;
+    padding: 15px;
 }
 .myform{
     padding: 15px;
+    margin-top: 20px;
 }
 .myform input{
-    padding: 5px;
+    padding: 15px;
+    font-size: 1.02em;
+}
+#mini-sec{
+    font-size: 1.02em;
+}
+.text-forrm{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.text-forrm textarea{
+    align-self: center;
 }
 #bot-btn{
     display: none;
@@ -242,7 +268,9 @@ nav{
 #bot-btn:hover{
     background-color: grey;
 }
-/******to-edit*/
+.contact{
+    background-color: rgb(71, 70, 70);
+}
 footer{
     align-self: end;
     bottom: 0;
@@ -362,10 +390,53 @@ footer a:hover{
         display: grid;
         grid-template-columns: 33% 33% 33%;
     }
+    .card img{
+         width: 60vw;
+         align-self: center;
+    }
+    .circl a{
+        width: 80%;
+        align-self: center;
+    }
+    .shp-innr img{
+        width: 60vw;
+        height: 200px;
+        align-self: center;
+    }
+    .shp-innr button{
+        font-size: 1.1em;
+    }
+    #mini-sec{
+        font-size: 1.05em;
+    }
     
 }
 /*769px — 1024px: Small screens, laptops*/
 @media  screen and (min-width: 769px) {
+    .disc-innr span h1,.disc-innr span p{
+          text-align: left;
+          padding-left: 60px;
+          letter-spacing: 5px;
+          word-spacing: 10px;
+    }
+    .lat-innr span h1,.lat-innr span p{
+        text-align: left;
+        padding-left: 240px;
+        letter-spacing: 5px;
+        word-spacing: 10px;
+  }
+  .cat-innr span h1,.cat-innr span p{
+    
+    padding-left: 180px;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
+.shp-innr span h1,.shp-innr span p{
+    text-align: right;
+   padding-right: 80px;
+   letter-spacing: 5px;
+   word-spacing: 10px;
+}
     .logo{
         font-size: 1.5em;
     }
@@ -373,19 +444,22 @@ footer a:hover{
         display: none;
     }
     .nav-list{
+        display: flex;
         flex-direction: row;
-        justify-content: left;
+        justify-content: center;
     }
     .nav-list li a{
-        padding: 0px 10px 0px 10px;
+        padding: 0px 6px 0px 6px;
         margin: 0px 10px 0px 10px;   
-        font-size: 1.4em; 
+        font-size: 1.2em; 
+    }
+    .disc-innr{
+        margin-top: 12rem;
+    }
+    .shp-innr img{
+        height: 300px;
     }
    
-    
-
-
-
     
     .contact{
         padding-bottom: 10px;
@@ -409,12 +483,55 @@ footer a:hover{
         padding-right: 60px;
     }   
 }
+
 /*1025px — 1200px: Desktops, large screens*/
 @media only screen and (min-width: 1025px){
-    
+    .nav-list li{
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+    .circl a{
+        width: 50%;
+        align-self: center;
+    }
 }
 @media only screen and (min-width: 1200px){
-    
+    body p{
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 40px;
+    }
+    body h1{
+        letter-spacing: 5px;
+        
+    }
+    body h2{
+        letter-spacing: 2px;
+    }
+    .nav-list li{
+        margin-left: 30px;
+        margin-right: 20px;
+
+    }
+    .shp-innr img{
+        height: 350px;
+    }
+    .shp-innr h4{
+        font-size: 1.2em;
+    }
+    .crid-crds{
+        font-size: 1.4em;
+    }
+    .contact{
+        text-align: left;
+        padding-left: 60px;
+    }
+    .contact p{
+        line-height: 10px;
+        padding: 10px;
+        margin: 5px;
+    }
     
 }
 
