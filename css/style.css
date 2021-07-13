@@ -1,10 +1,11 @@
 body{
     box-sizing: border-box;
-    z-index: 0;
+    z-index: -1;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     margin: 0;
 }
+
 body a, body i, body button{
     cursor: pointer;
 }
@@ -13,6 +14,7 @@ body i:hover{
 }
 .container{
     display: grid;
+    width: 100vw;
     grid-template-columns: 100vw;
     grid-template-rows: auto auto 1fr;
     grid-template-areas: 
@@ -23,8 +25,14 @@ body i:hover{
 header{
     grid-area: top;
     width: 100vw;
+    height: 72.81px;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    
+}
+header.grow{
+    height: 228.81px;
 }
 main{
     grid-area: mid;
@@ -32,11 +40,17 @@ main{
     display: grid;
     justify-content: center;
     justify-items: center;
-    margin-top: auto;
+    
+    
 }
+
 footer{
     grid-area: but;
     width: 100vw;
+    margin: 0;
+}
+.section span{
+    cursor: pointer;
 }
 nav{
     position: fixed;
@@ -86,6 +100,7 @@ nav{
     font-weight: 700;
     color: white;  
 }
+
 .nav-list a.newColor{
     color: green;
 }
@@ -95,20 +110,26 @@ nav{
 .nav-list.visible{
     display: flex;
 }
+
 .disc-innr{
     width: 100vw;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    background-color: rgba(243, 239, 239, 0.74);
     text-align: center;
     text-transform: capitalize;
-    transform: scale(1);
+    
+    background-color: rgba(195, 112, 233, 0.137);
 }
-.disc-innr.down{
+/*.disc-innr.down{
     margin-top:13rem;
+}*/
+.disc-innr:first-child{
+    cursor: pointer;
 }
+
 .cat-innr{
+    
     width: 100vw;
+    background-color: rgba(235, 111, 111, 0.137);
+    
 }
 .cards-innr{
     display: none;
@@ -116,6 +137,7 @@ nav{
 .cards-innr.visible{
     display: flex;
     flex-direction: column;
+    
 }
 .replacer{
     display: none;
@@ -134,12 +156,15 @@ nav{
     width: 100vw;
    text-align: center;
    text-transform: capitalize;
-   background-color: rgba(236, 13, 58, 0.089);
+   background-color: rgba(98, 98, 224, 0.137);
+  
 }
+
 .circl-innr{
     display: none;
     grid-template-columns: 50% 50%;
     grid-template-rows: 33% 33% 33%;
+   
 }
 .circl-innr.visible{
     display: grid;
@@ -189,7 +214,7 @@ nav{
 .cat-innr{
     text-align: center;
     text-transform: capitalize;
-    background-color: rgba(132, 235, 235, 0.178);
+    
 }
 .cat-innr video{
     width: 96vw;
@@ -199,10 +224,11 @@ nav{
     width: 100vw;
     text-align: center;
     text-transform: capitalize;
-    background-color: rgba(204, 248, 10, 0.062);
+    background-color: rgba(57, 199, 99, 0.137);
 }
 .shp-main{
     display: none;
+    
 }
 .shp-main.visible{
     display: block;
@@ -282,7 +308,6 @@ footer{
     justify-content: center;
     justify-items: center;
     text-align: center;
-    margin: 0px;
     padding: 0px;
     padding-bottom: 20px;
     background-color: rgb(44, 43, 43);
@@ -358,7 +383,9 @@ footer a:hover{
 }
 /*481px — 768px: iPads, Tablets*/
 @media  screen and (min-width: 481px) {
-   
+    header.grow{
+        height: 308.81px;
+    }
     .nav-list li{
         padding: 5px 20px 5px 20px;
         margin: 5px;
@@ -413,30 +440,35 @@ footer a:hover{
 }
 /*769px — 1024px: Small screens, laptops*/
 @media  screen and (min-width: 769px) {
-    .disc-innr span h1,.disc-innr span p{
-          text-align: left;
-          padding-left: 60px;
-          letter-spacing: 5px;
-          word-spacing: 10px;
+    header.grow{
+        height: 191.75px;
     }
-    .lat-innr span h1,.lat-innr span p{
-        text-align: left;
-        padding-left: 240px;
-        letter-spacing: 5px;
-        word-spacing: 10px;
-  }
-  .cat-innr span h1,.cat-innr span p{
-    
-    padding-left: 180px;
-    letter-spacing: 5px;
-    word-spacing: 10px;
-}
-.shp-innr span h1,.shp-innr span p{
-    text-align: right;
-   padding-right: 80px;
-   letter-spacing: 5px;
-   word-spacing: 10px;
-}
+    .disc-innr{
+        padding-top: 30px;
+    }
+    .colps-1,.colps-2,.colps-3,.colps-4{
+        border: 1px solid rgba(165, 162, 162, 0.219);
+        box-shadow: 0px 0px 6px 0px rgba(136, 134, 134, 0.521);  
+        width: 40vw;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    .colps-1{
+        background-color: rgba(235, 111, 111, 0.205);
+        margin-left: 5%;
+    }
+    .colps-2{
+        background-color: rgba(98, 98, 224, 0.212);
+        margin-left: 50%;
+    }
+    .colps-3{
+        background-color: rgba(195, 112, 233, 0.212);
+        margin-left: 5%;
+    }.colps-4{
+        background-color: rgba(57, 199, 99, 0.212);
+        margin-left: 50%;
+    }
     .logo{
         font-size: 1.5em;
     }
@@ -453,13 +485,11 @@ footer a:hover{
         margin: 0px 10px 0px 10px;   
         font-size: 1.2em; 
     }
-    .disc-innr{
-        margin-top: 12rem;
-    }
+    
     .shp-innr img{
         height: 300px;
     }
-   
+    
     
     .contact{
         padding-bottom: 10px;
@@ -514,10 +544,6 @@ footer a:hover{
         margin-right: 20px;
 
     }
-    .lat-innr span h1,.lat-innr span p{
-        text-align: left;
-        padding-left: 340px
-  }
     .shp-innr img{
         height: 350px;
     }

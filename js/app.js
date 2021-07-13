@@ -7,6 +7,7 @@ const AdrsInn = document.getElementById('contact');
 const myNav = document.querySelector('nav');
 const navMenu = document.createElement("ul");
 const topButtn = document.getElementById("bot-btn");
+const myHeadr = document.querySelector('header');
 
 navMenu.setAttribute('class' ,'nav-list');
 
@@ -46,10 +47,10 @@ function highLlinks(){
 };
 highLlinks();
 
-//toogle the nav menu and the first main section
+//toogle the nav menu and adjust the header
 const tooGleNav =()=>{
     navMenu.classList.toggle('visible');
-    DisCInn.classList.toggle('down');
+    myHeadr.classList.toggle('grow');
 };
 
 NAVBUTON.addEventListener('click',tooGleNav);
@@ -71,6 +72,11 @@ function scroOllto(sect){
   sect.scrollIntoView();
 };
 
+/*window.setTimeout(function forDis(){
+  scroOllto(DisCInn);
+  
+},3000);*/
+
 scroOllto(DisCInn);
 scroOllto(LatEInn);
 scroOllto(CatGInn);
@@ -80,18 +86,20 @@ scroOllto(AdrsInn);
 //controle the nav height and appearence when scrolling the page
 let prevScr = window.pageYOffset;
 
-window.setTimeout(function(){
-  window.addEventListener(
-    'scroll',function(){
-      let currScr = window.pageYOffset;
-      if(prevScr > currScr){
-        myNav.style.top='0px';
-      }else{
-        myNav.style.top ='-223px';
-      };
-      prevScr = currScr;
-    });
-},3000);
+  window.setTimeout(function(){
+    window.addEventListener(
+      'scroll',function(){
+        let currScr = window.pageYOffset;
+        if(prevScr > currScr){
+          myNav.style.top='0px';
+        }else{
+          myNav.style.top ='-223px';
+        };
+        prevScr = currScr;
+      });
+  },3000);
+
+
 
 
 
