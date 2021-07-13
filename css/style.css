@@ -5,7 +5,6 @@ body{
     font-size: 16px;
     margin: 0;
 }
-
 body a, body i, body button{
     cursor: pointer;
 }
@@ -28,8 +27,7 @@ header{
     height: 72.81px;
     display: flex;
     flex-direction: column;
-    margin: 0;
-    
+    margin: 0;   
 }
 header.grow{
     height: 228.81px;
@@ -39,11 +37,8 @@ main{
     width: 100vw;
     display: grid;
     justify-content: center;
-    justify-items: center;
-    
-    
+    justify-items: center;   
 }
-
 footer{
     grid-area: but;
     width: 100vw;
@@ -61,7 +56,6 @@ nav{
     background-image: url(./img/nav-im.jpg);
     background-size: cover;
     transition: top 0.3s;
-
 }
 .nav-top{
     display: flex;
@@ -100,7 +94,6 @@ nav{
     font-weight: 700;
     color: white;  
 }
-
 .nav-list a.newColor{
     color: green;
 }
@@ -110,12 +103,10 @@ nav{
 .nav-list.visible{
     display: flex;
 }
-
 .disc-innr{
     width: 100vw;
     text-align: center;
-    text-transform: capitalize;
-    
+    text-transform: capitalize;   
     background-color: rgba(195, 112, 233, 0.137);
 }
 /*.disc-innr.down{
@@ -124,20 +115,16 @@ nav{
 .disc-innr:first-child{
     cursor: pointer;
 }
-
 .cat-innr{
-    
     width: 100vw;
     background-color: rgba(235, 111, 111, 0.137);
-    
 }
 .cards-innr{
     display: none;
 }
 .cards-innr.visible{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
 .replacer{
     display: none;
@@ -156,15 +143,12 @@ nav{
     width: 100vw;
    text-align: center;
    text-transform: capitalize;
-   background-color: rgba(98, 98, 224, 0.137);
-  
+   background-color: rgba(98, 98, 224, 0.137); 
 }
-
 .circl-innr{
     display: none;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 33% 33% 33%;
-   
+    grid-template-rows: 33% 33% 33%;  
 }
 .circl-innr.visible{
     display: grid;
@@ -207,14 +191,12 @@ nav{
     box-shadow: 0px 0px 6px 0px rgba(121, 119, 119, 0.521);  
     margin-bottom: 10px;  
 }
-
 .for-fa .fas, .for-fa .fab, .for-fa .far{
     padding-top: 20%;
 }
 .cat-innr{
     text-align: center;
-    text-transform: capitalize;
-    
+    text-transform: capitalize;   
 }
 .cat-innr video{
     width: 96vw;
@@ -227,8 +209,7 @@ nav{
     background-color: rgba(57, 199, 99, 0.137);
 }
 .shp-main{
-    display: none;
-    
+    display: none;  
 }
 .shp-main.visible{
     display: block;
@@ -351,7 +332,6 @@ footer a:hover{
 .med-link i{
     padding: 5px;
     cursor: pointer;
-
 }
 .fa-facebook:hover{
     color: rgb(63, 63, 190);
@@ -435,8 +415,7 @@ footer a:hover{
     }
     #mini-sec{
         font-size: 1.05em;
-    }
-    
+    }   
 }
 /*769px — 1024px: Small screens, laptops*/
 @media  screen and (min-width: 769px) {
@@ -485,12 +464,9 @@ footer a:hover{
         margin: 0px 10px 0px 10px;   
         font-size: 1.2em; 
     }
-    
     .shp-innr img{
         height: 300px;
     }
-    
-    
     .contact{
         padding-bottom: 10px;
     }
@@ -513,13 +489,11 @@ footer a:hover{
         padding-right: 60px;
     }   
 }
-
 /*1025px — 1200px: Desktops, large screens*/
 @media only screen and (min-width: 1025px){
     .nav-list li{
         margin-left: 20px;
         margin-right: 20px;
-
     }
     .circl a{
         width: 50%;
