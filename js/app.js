@@ -74,18 +74,18 @@ scroOllto(ShopInn);
 scroOllto(AdrsInn);
 //controle the nav height and appearence when scrolling the page
 let prevScr = window.pageYOffset;
-  window.setTimeout(function(){
-    window.addEventListener(
-      'scroll',function(){
-        let currScr = window.pageYOffset;
-        if(prevScr > currScr){
-          myNav.style.top='0px';
-        }else{
-          myNav.style.top ='-223px';
-        };
-        prevScr = currScr;
-      });
-  },3000);
+
+window.addEventListener(
+  'scroll',function(){
+    let currScr = window.pageYOffset;
+    if(prevScr > currScr){
+       myNav.style.top='0px';
+    }else{
+       myNav.style.top ='-223px';
+    };
+    prevScr = currScr;
+});
+  
 // show the button if user scroll down to 20px
 window.onscroll = ()=>{goUp()};
 function goUp() {
