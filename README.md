@@ -1,7 +1,7 @@
 # **robot**
 *robot is a landing page project for udacity*
 this project contain *three* folders and *foor* files:
-##project staucture: 
+## project staucture: 
 * css-folder
     * image-folder
     * style-file
@@ -11,8 +11,8 @@ this project contain *three* folders and *foor* files:
 * readme-file
 ## HTML :
 **links** 
-* fonts : https://fonts.googleapis.com - automatic!
-* icons : https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css - automatic!
+* fonts : https://fonts.googleapis.com 
+* icons : https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css
 **body**:
 * container:
     * header: contain *navigation*
