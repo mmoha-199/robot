@@ -10,12 +10,12 @@ this project contain *three* folders and *foor* files:
 * html-file
 * readme-file
 ## HTML :
-**links** 
+**Links** 
 * fonts : https://fonts.googleapis.com 
 * icons : https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css
 
-**body**:
-* container:
+**Body**:
+* Container:
     * header: contain *navigation*
     * main: foor sections :
         * discover
@@ -27,19 +27,19 @@ this project contain *three* folders and *foor* files:
  * using the **grid** and **flex** to designe and controle the *container* elements
  * making the page responsive with **media query**
 ## JavaScript:
-1. select all elements needed for the functions :
-    * using getElementById, getElementByClassName and querySelector functions:
+* Select all elements needed for the functions :
+    * Use getElementById, getElementByClassName and querySelector functions:
        ```javascript
        const ShopInn = document.getElementById('shop');
        const myNav = document.querySelector('nav');
        const sctin = document.getElementsByClassName('section'); 
-    * using setAtribut to set classes:
+* Use setAtribut to set classes:
        ```javascript
        navMenu.setAttribute('class' ,'nav-list');
-    * using createElement to create ul list for the navigation bar :
+* use createElement to create ul list for the navigation bar :
        ```javascript
        const navMenu = document.createElement("ul");
-    * then create a function to add a dynamic navigation bar:
+* then create a functions: for exemple dynamic navigation bar function:
        ```javascript 
        function addNavEl(){
          for( const baseSect of sctin){
@@ -50,8 +50,12 @@ this project contain *three* folders and *foor* files:
             };
             myNav.appendChild(navMenu);
         };
-    
-2. 
+
+## Sources:
+
+https://builtin.com/robotics
+https://ifr.org/
+https://www.rethinkrobotics.com/
 
 
 

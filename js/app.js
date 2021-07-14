@@ -4,15 +4,18 @@ const LatEInn = document.getElementById('latest');
 const CatGInn = document.getElementById('categories'); 
 const ShopInn = document.getElementById('shop');
 const AdrsInn = document.getElementById('contact');
-const myNav = document.querySelector('nav');
-const navMenu = document.createElement("ul");
 const topButtn = document.getElementById("bot-btn");
 const myHeadr = document.querySelector('header');
+
+const myNav = document.querySelector('nav');
+const navMenu = document.createElement("ul");
+const sctin = document.getElementsByClassName('section');
 navMenu.setAttribute('class' ,'nav-list');
-let n ='nav';
-const sctin = document.getElementsByClassName('section'); 
-document.body.onload = addNavEl();
+
 //create a dynamic navigation list with 'li' s items
+let n ='nav';
+document.body.onload = addNavEl();
+
 function addNavEl(){
   for( const baseSect of sctin){
     const linkName = baseSect.id;
@@ -22,6 +25,7 @@ function addNavEl(){
   };
   myNav.appendChild(navMenu);
 };
+
 function highLlinks(){
   //create a function to get the width and hight of an element in the view
   const getscaugth=(el)=>{
@@ -43,6 +47,7 @@ function highLlinks(){
   }
 };
 highLlinks();
+
 //toogle the nav menu and adjust the header
 const tooGleNav =()=>{
     navMenu.classList.toggle('visible');
@@ -59,22 +64,19 @@ tooGlSections(DisCInn);
 tooGlSections(LatEInn);
 tooGlSections(CatGInn);
 tooGlSections(ShopInn);
+
 //when click a link in the nav list scroll to section using the reference
 function scroOllto(sect){
   sect.scrollIntoView();
 };
-/*window.setTimeout(function forDis(){
-  scroOllto(DisCInn);
-  
-},3000);*/
 scroOllto(DisCInn);
 scroOllto(LatEInn);
 scroOllto(CatGInn);
 scroOllto(ShopInn);
 scroOllto(AdrsInn);
+
 //controle the nav height and appearence when scrolling the page
 let prevScr = window.pageYOffset;
-
 window.addEventListener(
   'scroll',function(){
     let currScr = window.pageYOffset;
@@ -85,7 +87,7 @@ window.addEventListener(
     };
     prevScr = currScr;
 });
-  
+
 // show the button if user scroll down to 20px
 window.onscroll = ()=>{goUp()};
 function goUp() {
@@ -94,12 +96,13 @@ function goUp() {
   } else {
     topButtn.style.display = "none";
   }
-}
+};
+
 // When the button cliked scroll to the top 
 function toptoZro() {
   document.documentElement.scrollTop = 0; 
-}
-topButtn.addEventListener('click',toptoZro)
+};
+topButtn.addEventListener('click',toptoZro);
 
 
 

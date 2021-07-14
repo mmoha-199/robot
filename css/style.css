@@ -88,7 +88,6 @@ nav{
 .nav-list a{
     text-decoration: none;
     font-family: inherit;
-    /*text-transform: uppercase;*/
     letter-spacing: 2px;
     font-size: 1.2em;
     font-weight: 700;
@@ -109,9 +108,6 @@ nav{
     text-transform: capitalize;   
     background-color: rgba(195, 112, 233, 0.137);
 }
-/*.disc-innr.down{
-    margin-top:13rem;
-}*/
 .disc-innr:first-child{
     cursor: pointer;
 }
@@ -368,12 +364,10 @@ footer a:hover{
     }
     .nav-list li{
         padding: 5px 20px 5px 20px;
-        margin: 5px;
-        
+        margin: 5px;   
     }
     .nav-list li a{
-        font-size: 1.2em;
-        
+        font-size: 1.2em;  
     }
 }
 @media  screen and (min-width: 600px) {
@@ -421,6 +415,9 @@ footer a:hover{
 @media  screen and (min-width: 769px) {
     header.grow{
         height: 191.75px;
+    }
+    main{
+        margin-top:7.4rem;
     }
     .disc-innr{
         padding-top: 30px;
@@ -507,8 +504,7 @@ footer a:hover{
         margin-bottom: 40px;
     }
     body h1{
-        letter-spacing: 5px;
-        
+        letter-spacing: 5px;    
     }
     body h2{
         letter-spacing: 2px;
@@ -516,7 +512,6 @@ footer a:hover{
     .nav-list li{
         margin-left: 30px;
         margin-right: 20px;
-
     }
     .shp-innr img{
         height: 350px;
@@ -535,8 +530,7 @@ footer a:hover{
         line-height: 10px;
         padding: 10px;
         margin: 5px;
-    }
-    
+    }  
 }
 
 
