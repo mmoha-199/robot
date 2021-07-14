@@ -53,9 +53,10 @@ this project contain *three* folders and *foor* files:
 
 ## Sources:
 
-https://builtin.com/robotics
-https://ifr.org/
-https://www.rethinkrobotics.com/
+* https://builtin.com/robotics
+* https://ifr.org/
+* https://www.rethinkrobotics.com/
+* https://en.wikipedia.org/wiki/Wiki
 
 
 
