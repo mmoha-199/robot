@@ -10,6 +10,7 @@ const myHeadr = document.querySelector('header');
 const myNav = document.querySelector('nav');
 const navMenu = document.createElement("ul");
 const sctin = document.getElementsByClassName('section');
+const aElments = navMenu.getElementsByTagName('a');
 navMenu.setAttribute('class' ,'nav-list');
 
 //create a dynamic navigation list with 'li' s items
@@ -65,15 +66,17 @@ tooGlSections(LatEInn);
 tooGlSections(CatGInn);
 tooGlSections(ShopInn);
 
-//when click a link in the nav list scroll to section using the reference
-function scroOllto(sect){
-  sect.scrollIntoView();
+//when click a link in the nav list scroll to its section 
+function takeMeTo(sect){
+  for(const a of aElments){
+    a.addEventListener('click',sect.scrollIntoView());
+  }
 };
-scroOllto(DisCInn);
-scroOllto(LatEInn);
-scroOllto(CatGInn);
-scroOllto(ShopInn);
-scroOllto(AdrsInn);
+takeMeTo(DisCInn);
+takeMeTo(LatEInn);
+takeMeTo(CatGInn);
+takeMeTo(ShopInn);
+takeMeTo(AdrsInn);
 
 //controle the nav height and appearence when scrolling the page
 let prevScr = window.pageYOffset;
