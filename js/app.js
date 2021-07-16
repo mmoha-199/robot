@@ -10,7 +10,7 @@ const myHeadr = document.querySelector('header');
 const myNav = document.querySelector('nav');
 const navMenu = document.createElement("ul");
 const sctin = document.getElementsByClassName('section');
-const aElments = navMenu.getElementsByTagName('a');
+
 navMenu.setAttribute('class' ,'nav-list');
 
 //create a dynamic navigation list with 'li' s items
@@ -40,14 +40,44 @@ function highLlinks(){
     //check if true then add the new class to the links
     window.addEventListener('scroll',function(){
       if(getscaugth(sectInScrn)){
+        sectInScrn.classList.add('active');
         readlink.classList.add('newColor');
       }else{      
+        sectInScrn.classList.remove('active');
         readlink.classList.remove('newColor');
       };
-    });  
-  }
+    }); 
+  };
 };
 highLlinks();
+const aElments = navMenu.getElementsByTagName('a');
+function scrolToSc(){
+  /*for(const sect of sctin){
+    const sectInScrn = document.getElementById(sect.id);
+    const readlink = document.getElementById(sect.id + n);
+      //when click a link in the nav list scroll to its section 
+      readlink.addEventListener('click',function(){
+        
+          sectInScrn.scrollIntoView();
+        
+        
+      });}*/
+      
+  
+  for(let el of aElments){
+    el.addEventListener('click',function(z){
+      z.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+
+    });
+  };
+    
+     
+};
+scrolToSc();
+
+
+
 
 //toogle the nav menu and adjust the header
 const tooGleNav =()=>{
@@ -66,17 +96,9 @@ tooGlSections(LatEInn);
 tooGlSections(CatGInn);
 tooGlSections(ShopInn);
 
-//when click a link in the nav list scroll to its section 
-function takeMeTo(sect){
-  for(const a of aElments){
-    a.addEventListener('click',sect.scrollIntoView());
-  }
-};
-takeMeTo(DisCInn);
-takeMeTo(LatEInn);
-takeMeTo(CatGInn);
-takeMeTo(ShopInn);
-takeMeTo(AdrsInn);
+
+
+
 
 //controle the nav height and appearence when scrolling the page
 let prevScr = window.pageYOffset;
