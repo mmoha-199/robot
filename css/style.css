@@ -259,11 +259,15 @@ nav{
     margin-bottom: 5px;
 }
 .sign-butt{
-    margin: 15px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
 }
-.sign-butt button{
-    padding: 10px;
+.sign-butt a{
+    padding: 8px;
     margin: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    box-shadow: 0px 0px 6px 0px rgba(121, 119, 119, 0.521);
 }
 .crid-crds{
     margin-top: 15px;
@@ -301,6 +305,7 @@ nav{
     padding: 10px;
     font-size: 1.1em;
     transition: background-color 0.3s;
+    outline: none;
 }
 #bot-btn:hover{
     background-color: grey;

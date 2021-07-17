@@ -79,19 +79,19 @@ function updateSowBut(){
       but.addEventListener('click',function(b){
         b.preventDefault();
         const restOf = document.querySelector(this.getAttribute('href'));
-        restOf.classList.toggle('visible');
-        /*if(restOf.classList ='visible'){
-          this.innetText = `show less`;
-        }else{
-          this.innetText = `show more`;
-        };*/
+        restOf.classList.toggle('visible'); 
+ 
       });
+      but.addEventListener('click',function(){
+        //const rrest = document.querySelector(this.getAttribute('href'));
+        if(but.textContent ==='show more'){
+          but.textContent = 'show less';
+       }else{
+          but.textContent = 'show more';}
+        });
+    };
       
-    }; 
-  
-  
-
-};
+}; 
 
 updateSowBut();
 
