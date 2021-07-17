@@ -70,35 +70,23 @@ const tooGleNav =()=>{
     myHeadr.classList.toggle('grow');
 };
 NAVBUTON.addEventListener('click',tooGleNav);
-
-
-
-function updateSowBut(){
+// toggle sections to make them collapsable when we click the button
+function togglleSects(){
     const restButts = document.getElementsByTagName('button');
     for(const but of restButts){
       but.addEventListener('click',function(b){
         b.preventDefault();
         const restOf = document.querySelector(this.getAttribute('href'));
         restOf.classList.toggle('visible'); 
- 
-      });
-      but.addEventListener('click',function(){
-        //const rrest = document.querySelector(this.getAttribute('href'));
+        //update button text
         if(but.textContent ==='show more'){
           but.textContent = 'show less';
-       }else{
+        }else{
           but.textContent = 'show more';}
-        });
-    };
-      
+      });    
+    };   
 }; 
-
-updateSowBut();
-
-
-
-
-
+togglleSects();
 //controle the nav height and appearence when scrolling the page
 let prevScr = window.pageYOffset;
 window.addEventListener(
@@ -114,7 +102,7 @@ window.addEventListener(
 
 // show the button if user scroll down to 20px
 window.onscroll = ()=>{goUp()};
-function goUp() {
+function goUp(){
   if (document.documentElement.scrollTop > 20) {
     topButtn.style.display = "block";
   } else {
@@ -126,7 +114,7 @@ function goUp() {
 function toptoZro() {
   document.documentElement.scrollTop = 0; 
 };
-topButtn.addEventListener('click',toptoZro);
+topButtn.addEventListener('click',toptoZro); 
 
 
 
