@@ -1,4 +1,4 @@
-const NAVBUTON = document.getElementById('show-nav');
+/*const NAVBUTON = document.getElementById('show-nav');
 const DisCInn = document.getElementById('discover'); 
 const LatEInn = document.getElementById('latest'); 
 const CatGInn = document.getElementById('categories'); 
@@ -61,7 +61,7 @@ function scrolToSc(){
           sectInScrn.scrollIntoView();
         
         
-      });}*/
+      });}
       
   
   for(let el of aElments){
@@ -127,7 +127,7 @@ function goUp() {
 function toptoZro() {
   document.documentElement.scrollTop = 0; 
 };
-topButtn.addEventListener('click',toptoZro);
+topButtn.addEventListener('click',toptoZro);*/
 
 
 

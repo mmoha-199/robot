@@ -111,33 +111,48 @@ nav{
     outline: none;
     width: 60vw;
     height: 30px;
+    align-self: center;
 }
 #show-all.hidn{
     display: none;
-
 }
 .sectImg{
     width: 100vw;
-    height: 300px;
-    background-size: cover;
+    display: block;
+}
+.colps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    padding-bottom: 10px;
+}
+.colps p:last-of-type{
+    line-height: 30px;
+    text-align: justify;
+    padding: 5px;
 }
 .disc-innr{
     width: 100vw;
     text-align: center;
     text-transform: capitalize;   
-    background-color: rgba(195, 112, 233, 0.137);
+    background-color: rgba(195, 112, 233, 0.137); 
 }
-.disc-innr:first-child{
-    cursor: pointer;
+.disc-rest{
+    display: none;
+}
+.disc-rest.visible{
+    display: flex;
+    flex-direction: column;
 }
 .cat-innr{
     width: 100vw;
     background-color: rgba(235, 111, 111, 0.137);
 }
-.cards-rest{
+.cat-rest{
     display: none;
 }
-.cards-rest.visible{
+.cat-rest.visible{
     display: flex;
     flex-direction: column;   
 }
@@ -160,12 +175,12 @@ nav{
    text-transform: capitalize;
    background-color: rgba(98, 98, 224, 0.137); 
 }
-.circl-rest{
+.lat-rest{
     display: none;
     grid-template-columns: 50% 50%;
     grid-template-rows: 33% 33% 33%;  
 }
-.circl-rest.visible{
+.lat-rest.visible{
     display: grid;
 }
 .circl{
@@ -217,16 +232,16 @@ nav{
     width: 96vw;
     height: 250px;
 }
-.shp-innr{
+.shop-innr{
     width: 100vw;
     text-align: center;
     text-transform: capitalize;
     background-color: rgba(57, 199, 99, 0.137);
 }
-.shp-rest{
+.shop-rest{
     display: none;  
 }
-.shp-rest.visible{
+.shop-rest.visible{
     display: block;
 }
 .sign-need{
