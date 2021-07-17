@@ -1,4 +1,4 @@
-/*const NAVBUTON = document.getElementById('show-nav');
+const NAVBUTON = document.getElementById('show-nav');
 const DisCInn = document.getElementById('discover'); 
 const LatEInn = document.getElementById('latest'); 
 const CatGInn = document.getElementById('categories'); 
@@ -52,27 +52,12 @@ function highLlinks(){
 highLlinks();
 const aElments = navMenu.getElementsByTagName('a');
 function scrolToSc(){
-  /*for(const sect of sctin){
-    const sectInScrn = document.getElementById(sect.id);
-    const readlink = document.getElementById(sect.id + n);
-      //when click a link in the nav list scroll to its section 
-      readlink.addEventListener('click',function(){
-        
-          sectInScrn.scrollIntoView();
-        
-        
-      });}
-      
-  
   for(let el of aElments){
     el.addEventListener('click',function(z){
       z.preventDefault();
       document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-
     });
-  };
-    
-     
+  };    
 };
 scrolToSc();
 
@@ -85,16 +70,20 @@ const tooGleNav =()=>{
     myHeadr.classList.toggle('grow');
 };
 NAVBUTON.addEventListener('click',tooGleNav);
-function tooGlSections(a){
-  const x = a.firstElementChild;
-  const b = a.firstElementChild.nextElementSibling;
-  const ttgg=()=>{b.classList.toggle('visible')};
-  x.addEventListener('click',ttgg);
+
+
+
+
+function tooGlSections(){
+  const restButts = document.getElementsByTagName('button');
+  for(const but of restButts){
+    but.addEventListener('click',function(b){
+      b.preventDefault();
+      document.querySelector(this.getAttribute('href')).classList.toggle('visible');
+    });   
+  }; 
 };
 tooGlSections(DisCInn);
-tooGlSections(LatEInn);
-tooGlSections(CatGInn);
-tooGlSections(ShopInn);
 
 
 
@@ -127,7 +116,7 @@ function goUp() {
 function toptoZro() {
   document.documentElement.scrollTop = 0; 
 };
-topButtn.addEventListener('click',toptoZro);*/
+topButtn.addEventListener('click',toptoZro);
 
 
 
