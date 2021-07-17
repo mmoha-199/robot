@@ -292,7 +292,7 @@ nav{
 .text-forrm textarea{
     align-self: center;
 }
-#bot-btn{
+.topButt{
     display: none;
     position: fixed;
     bottom: 20px;
@@ -306,7 +306,10 @@ nav{
     font-size: 1.1em;
     transition: background-color 0.3s;
 }
-#bot-btn:hover{
+.topButt.active{
+    display: block;
+}
+.topButt:hover{
     background-color: grey;
 }
 .contact{

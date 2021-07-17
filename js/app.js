@@ -76,8 +76,7 @@ function togglleSects(){
     for(const but of restButts){
       but.addEventListener('click',function(b){
         b.preventDefault();
-        const restOf = document.querySelector(this.getAttribute('href'));
-        restOf.classList.toggle('visible'); 
+        document.querySelector(this.getAttribute('href')).classList.toggle('visible'); 
         //update button text
         if(but.textContent ==='show more'){
           but.textContent = 'show less';
@@ -104,9 +103,9 @@ window.addEventListener(
 window.onscroll = ()=>{goUp()};
 function goUp(){
   if (document.documentElement.scrollTop > 20) {
-    topButtn.style.display = "block";
+    topButtn.classList.add('active');
   } else {
-    topButtn.style.display = "none";
+    topButtn.classList.remove('active');
   }
 };
 
