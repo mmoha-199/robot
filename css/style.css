@@ -132,6 +132,14 @@ nav{
     text-align: justify;
     padding: 5px;
 }
+.colps button{
+    width: 60vw;
+    align-self: center;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    box-shadow: 0px 0px 6px 0px rgba(121, 119, 119, 0.521); 
+}
 .disc-innr{
     width: 100vw;
     text-align: center;

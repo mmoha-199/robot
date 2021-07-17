@@ -50,6 +50,7 @@ function highLlinks(){
   };
 };
 highLlinks();
+//smooth scrolling to the section when clicking the navigation link
 const aElments = navMenu.getElementsByTagName('a');
 function scrolToSc(){
   for(let el of aElments){
@@ -61,15 +62,13 @@ function scrolToSc(){
 };
 scrolToSc();
 
-
-
-
 //toogle the nav menu and adjust the header
 const tooGleNav =()=>{
     navMenu.classList.toggle('visible');
     myHeadr.classList.toggle('grow');
 };
 NAVBUTON.addEventListener('click',tooGleNav);
+
 // toggle sections to make them collapsable when we click the button
 function togglleSects(){
     const restButts = document.getElementsByTagName('button');
@@ -86,6 +85,7 @@ function togglleSects(){
     };   
 }; 
 togglleSects();
+
 //controle the nav height and appearence when scrolling the page
 let prevScr = window.pageYOffset;
 window.addEventListener(
