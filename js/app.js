@@ -73,17 +73,27 @@ NAVBUTON.addEventListener('click',tooGleNav);
 
 
 
+function updateSowBut(){
+    const restButts = document.getElementsByTagName('button');
+    for(const but of restButts){
+      but.addEventListener('click',function(b){
+        b.preventDefault();
+        const restOf = document.querySelector(this.getAttribute('href'));
+        restOf.classList.toggle('visible');
+        /*if(restOf.classList ='visible'){
+          this.innetText = `show less`;
+        }else{
+          this.innetText = `show more`;
+        };*/
+      });
+      
+    }; 
+  
+  
 
-function tooGlSections(){
-  const restButts = document.getElementsByTagName('button');
-  for(const but of restButts){
-    but.addEventListener('click',function(b){
-      b.preventDefault();
-      document.querySelector(this.getAttribute('href')).classList.toggle('visible');
-    });   
-  }; 
 };
-tooGlSections(DisCInn);
+
+updateSowBut();
 
 
 
